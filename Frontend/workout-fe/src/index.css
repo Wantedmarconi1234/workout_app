@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #e6eded;
+  --tertiary-color: #cfbf93;
+  --text-color: #250b66;
+  --green-color: #266603;
+  --primary-padding: 0 15%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", system-ui;
+  background-color: var(--secondary-color);
+  font-weight: 400;
+}
+
+
+/* Header styles */
+.header {
+  background-color: var(--primary-color);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: var(--primary-padding);
+  /* box-shadow: -1px 15px 5px -6px rgba(32, 31, 31, 0.75); */
+}
+
+.header a {
+ text-decoration: none;
+ font-size: 25px;
+ font-weight: bolder;
+ color: #252329;
+}
+
+
+/* Main-color */
+.main-comp {
+  padding: var(--primary-padding);
+  padding-top: 20px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 70% 25%;
+  gap: 20px;
+}
+
+/* workout card */
+.workout-card {
+  background: var(--primary-color);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  font-size: 12px;
+  position: relative;
+}
+
+.workout-card:hover {
+  background-color: var(--tertiary-color);
+  transform: scale3d(1.1);
+  transition: all ease-in-out  900ms;
+}
+
+.workout-card > p > span {
+  font-weight: bold;
+}
+
+.workout-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.delete-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 10px;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.edit-icon:hover {
+  color: red;
+  transform: scale3d(1.1);
+  transition: all ease-in-out  10ms;
+}
+
+.delete-icon:hover {
+  color: red;
+  transform: scale3d(1.1);
+  transition: all ease-in-out  10ms;
+}
+
+
+/* Workout form styles */
+
+.form {
+  background-color: var(--primary-color);
+  height: fit-content;
+  padding: 30px;
+  width: fit-content;
+  border-radius: 5px;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form:hover {
+  background-color: var(--tertiary-color);
+  transform: scale3d(1.1);
+  transition: all 900ms;
+}
+
+Form {
+  display: grid;
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--green-color);
+}
+
+input {
+  height: 20px;
+  background-color: var(--secondary-color);
+  border: none;
+  outline: none;
+  border-bottom: solid 2px var(--green-color);
+  color: var(--text-color);
+  text-indent: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+button {
+  height: 30px;
+  background-color: var(--green-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--text-color);
+}

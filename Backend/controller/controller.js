@@ -63,11 +63,6 @@ const deleteWorkout = async (req, res) => {
         const workout = await workoutModel.findOneAndDelete({_id: id})
         res.status(200).json(workout)
     }
-
-    if (!workout) {
-        res.status(200).json({message: "There was no workout"})
-    }
-
     if(!mongoose.Types.ObjectId.isValid(id))
         res.status(404).json({Error: "oops, invalid id"})
 }
